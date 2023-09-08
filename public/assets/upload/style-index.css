@@ -152,6 +152,7 @@ body {
   background-color: darkgray;
   height: 50px;
   position: relative;
+  width: 100%;
 }
 
 .button-box a{

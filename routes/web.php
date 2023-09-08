@@ -5,11 +5,15 @@ use App\Http\Controllers\FileController;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome')->name('login');
 });
 
-Route::prefix('file')->group(function () {
+Route::group(['prefix' => 'file-test', 'middleware' => ['web']], function () {
+    \FileManager::routes();
     Route::get('/', [FileController::class, 'index'])->name('file.index');
     Route::get('/upload', [FileController::class, 'viewUpload'])->name('file.upload');
     Route::post('/upload', [FileController::class, 'upload'])->name('file.upload.post');
+});
+Route::group(['prefix' => 'file', 'middleware' => ['web']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
 });

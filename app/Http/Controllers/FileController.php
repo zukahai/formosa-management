@@ -11,7 +11,7 @@ class FileController extends Controller
 
     function index() {
         date_default_timezone_set('Asia/Ho_Chi_Minh');
-        $publicFolderPath = public_path('file-uploads'); 
+        $publicFolderPath = public_path('storage/files/formosa-files'); 
         $fileNames = scandir($publicFolderPath); 
         $fileNames = array_diff($fileNames, ['.', '..']);
         $fileNames = array_values($fileNames);
