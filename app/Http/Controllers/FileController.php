@@ -11,7 +11,7 @@ class FileController extends Controller
 
     function index() {
         date_default_timezone_set('Asia/Ho_Chi_Minh');
-        $publicFolderPath = public_path('storage/files/formosa-files'); 
+        $publicFolderPath = public_path('storage/files'); 
         $fileNames = scandir($publicFolderPath); 
         $fileNames = array_diff($fileNames, ['.', '..']);
         $fileNames = array_values($fileNames);
@@ -39,7 +39,7 @@ class FileController extends Controller
         if ($request->hasFile('file')) {
             $file = $request->file;
             $originalName = $file->getClientOriginalName();
-            $file->move(public_path('file-uploads'), $originalName);
+            $file->move(public_path('storage/files'), $originalName);
         }
         return redirect()->route('file.index');
     }

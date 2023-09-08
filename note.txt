@@ -1,0 +1,4 @@
+// upload file lớn
+Sửa php.ini trong xampp
+Mở extension=gd 
+Sửa post_max_size, upload_max_filesize, 

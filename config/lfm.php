@@ -66,7 +66,9 @@ return [
                 'application/x-rar',
                 'text/csv',
                 'text/x-csv',
-                
+                'application/octet-stream',
+                //exe, msi
+                'application/x-msdownload',
             ],
         ],
         'image' => [
