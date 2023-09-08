@@ -26,6 +26,10 @@ class FileController extends Controller
                 'created_at' => date('Y-m-d H:i:s', $fileTime), // Định dạng thời gian
             ];
         }
+
+        usort($filesWithTime, function($a, $b) {
+            return $a['created_at'] < $b['created_at'];
+        });
     
         $data['files'] = $filesWithTime;
         return view('file.index', $data);

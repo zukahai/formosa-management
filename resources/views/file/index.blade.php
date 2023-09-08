@@ -16,7 +16,7 @@
 
     @foreach($files as $file)
     <div class="ag-courses_item">
-      <a href="{{asset("storage/files/".$file['name'])}}" class="ag-courses-item_link">
+      <a href="{{asset("storage/files/".$file['name'])}}" download="{{$file['name']}}" class="ag-courses-item_link">
         <div class="ag-courses-item_bg"></div>
 
         <div class="ag-courses-item_title">

@@ -67,7 +67,7 @@ App.init = function () {
     $("footer").classList.remove("hasFiles");
     $(".importar").classList.remove("active");
     setTimeout(() => {
-      $("#drop").classList.remove("hidden");
+      // $("#drop").classList.remove("hidden");
     }, 500);
   });
 

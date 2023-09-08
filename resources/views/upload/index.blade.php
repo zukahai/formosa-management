@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,300'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/resumable.js/1.1.0/resumable.js"></script>
     <link rel="stylesheet" href="{{ asset('assets/upload/style.css') }}">
 
 </head>
@@ -33,6 +38,7 @@
                             files</a></p>
                     <input type="file" multiple="multiple" name="file" />
                 </div>
+                
                 <footer>
                     <div class="divider">
                         <span>
@@ -41,13 +47,29 @@
                     </div>
                     <div class="list-files">
                     </div>
-                    <button class="importar" type="submit">UPDATE FILES</button>
+                    <div class="loading-box">
+                      <img class="hidden" id="loading" src="{{asset('assets/load.gif')}}" alt="loading" />
+                    </div>
+                    <button class="importar" type="submit"  onclick="load()">UPDATE FILES</button>
                 </footer>
             </form>
+            
         </div>
     </div>
     <!-- partial -->
     <script src="{{ asset('assets/upload/script.js') }}"></script>
+
+    <script>
+      function load(){
+        let load = document.getElementById('loading');
+        load.classList.remove('hidden');
+        let body = document.getElementById('drop');
+        body.classList.add('hidden');
+      }
+
+
+      
+  </script>
 
 </body>
 

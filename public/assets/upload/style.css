@@ -356,3 +356,16 @@ body {
     height: 100%;
   }
 }
+
+.hidden {
+  display: none !important;
+}
+
+.loading-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Chiều cao của màn hình */
+  flex-direction: column;
+}
+
