@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\FileController;
 
 
 Route::get('/', function () {
@@ -9,7 +9,7 @@ Route::get('/', function () {
 });
 
 Route::prefix('file')->group(function () {
-    Route::get('/', [FileController::class, 'index']);
-    Route::get('/upload', [FileController::class, 'viewUpload']);
-    Route::post('/upload', [FileController::class, 'upload']);
+    Route::get('/', [FileController::class, 'index'])->name('file.index');
+    Route::get('/upload', [FileController::class, 'viewUpload'])->name('file.upload');
+    Route::post('/upload', [FileController::class, 'upload'])->name('file.upload.post');
 });
