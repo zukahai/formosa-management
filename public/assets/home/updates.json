@@ -1,0 +1,12 @@
+[
+    {
+        "app": "Document Management System",
+        "version": "1.0.0",
+        "url": "http://10.198.138.153/SetupFile/DocumentSystem/SetupDocumentSystem.msi"
+    },
+    {
+        "app": "CalibrationCertificate",
+        "version": "2.7.5",
+        "url": "http://10.198.138.153/SetupFile/CalibrationCertificate/SetupProject.msi"
+    }
+]

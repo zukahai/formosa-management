@@ -5,7 +5,7 @@ use App\Http\Controllers\FileController;
 
 
 Route::get('/', function () {
-    return view('welcome')->name('login');
+    return View('home.index');
 });
 
 Route::group(['prefix' => 'files', 'middleware' => ['web']], function () {

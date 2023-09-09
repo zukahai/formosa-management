@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tải lên file lên Server IIS</title>
+  <script>
+    function uploadFile() {
+      var fileInput = document.getElementById('fileInput');
+      var file = fileInput.files[0];
+      
+      if (file) {
+        var formData = new FormData();
+        formData.append('file', file);
+        
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'upload.php', true);
+        
+        xhr.onload = function() {
+          if (xhr.status === 200) {
+            alert('File tai len thanh cong.');
+          } else {
+            alert('loi khi tai file len.');
+          }
+        };
+        
+        xhr.send(formData);
+      } else {
+        alert('vui long chon file.');
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Tải lên file lên Server IIS</h1>
+  <input type="file" id="fileInput">
+  <button onclick="uploadFile()">Tải lên</button>
+</body>
+</html>

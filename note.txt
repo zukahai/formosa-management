@@ -2,3 +2,11 @@
 Sửa php.ini trong xampp
 Mở extension=gd 
 Sửa post_max_size, upload_max_filesize, 
+
+// Khoi dong cung window
+G: && cd formosa-management && php artisan serve --host 192.168.1.12:2712
+
+Mở startup
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp
+Tạo shortcut
+C:\Windows\System32\cmd.exe /K G: && cd formosa-management && php artisan serve --host 192.168.1.12:2712
